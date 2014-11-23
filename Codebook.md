@@ -32,13 +32,22 @@ The following files are available for the train and test data. Their description
 
 ## Transformations
 
-1.Merges the training and the test sets to create one data set.
-2.Extracts only the measurements on the mean and standard deviation for each measurement.
-3.Uses descriptive activity names to name the activities in the data set
-4.Appropriately labels the data set with descriptive activity names.
-5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+* 1. Merges the training and the test sets to create one data set.
+* 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+* 3. Uses descriptive activity names to name the activities in the data set
+* 4. Appropriately labels the data set with descriptive activity names.
+* 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
 ## R script
 
+The R script run_analysis.R need to be loaded into your R working directory, and implements the steps above.
+
+* As preliminary operations, it checks if the necessary data are already existing in the working directory, otherwise it downloads them, same for the package "plyr" needed within the code. The all the relevant files are read.
+* The merge at point 1 is done with the cbind and rbind functions.
+* means and std dev are identified and extracted by column name. 
+* activities can be named via a join on the activity id (description are in activity_labels.txt)
+* some string manipulations can be done with the gsub function, to better read the column names.
+
 ## Results
+* The required results are written in a file "tidy.txt" (tidy data set with the average of each variable for each activity and each subject, this is done with the ddply in combination with mean function).
