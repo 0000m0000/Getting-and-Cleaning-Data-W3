@@ -7,6 +7,6 @@ Within this Github repo you find the R code ("run_analysis.R") for performing yo
 * Uses descriptive activity names to name the activities in the data set
 * Appropriately labels the data set with descriptive variable names. 
 * Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-The output will be the tidy data set. 
 
+The output will be the tidy data set. 
 Please also see the attached code book describing the variables.
