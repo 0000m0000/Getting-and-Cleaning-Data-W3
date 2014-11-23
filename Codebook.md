@@ -43,7 +43,7 @@ The following files are available for the train and test data. Their description
 
 The R script run_analysis.R need to be loaded into your R working directory, and implements the steps above.
 
-* As preliminary operations, it checks if the necessary data are already existing in the working directory, otherwise it downloads them, same for the package "plyr" needed within the code. The all the relevant files are read.
+* As preliminary operations, it checks if the necessary data are already existing in the working directory, otherwise it downloads them, same for the package "plyr" needed within the code. Then all the relevant files are read.
 * The merge at point 1 is done with the cbind and rbind functions.
 * means and std dev are identified and extracted by column name. 
 * activities can be named via a join on the activity id (description are in activity_labels.txt)
